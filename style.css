@@ -1,0 +1,297 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  position: relative;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #2563eb;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #2563eb;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   HERO / HOME
+========================= */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   SECTIONS (GENERAL)
+========================= */
+section {
+  padding: 90px 10%;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #1e293b;
+}
+
+/* =========================
+   ABOUT
+========================= */
+#about {
+  background: #ffffff;
+}
+
+#about p {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* =========================
+   SERVICES & EXPERTISE
+========================= */
+#services {
+  background: #f1f5f9;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #1e40af;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+#portfolio {
+  background: #ffffff;
+}
+
+#portfolio .card {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Portfolio colors */
+#portfolio .card:nth-child(1) { background: #3b82f6; }
+#portfolio .card:nth-child(2) { background: #22c55e; }
+#portfolio .card:nth-child(3) { background: #f97316; }
+#portfolio .card:nth-child(4) { background: #a855f7; }
+#portfolio .card:nth-child(5) { background: #f59e0b; }
+#portfolio .card:nth-child(6) { background: #ef4444; }
+
+/* =========================
+   CONTACT
+========================= */
+#contact {
+  background: #f1f5f9;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav a.active {
+  color: #2563eb;
+}
+
+
+form button:hover {
+  background: #1e40af;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #020617;
+  color: #cbd5f5;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  nav {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 70px 6%;
+  }
+}
+/* =========================
+   HERO NAME & AI BADGE
+========================= */
+.hero-badge {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.05);
+}
+
+.hero-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: #ffffff; /* WHITE */
+}
+
+.hero-subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: #38bdf8; /* SKY BLUE */
+  font-weight: 500;
+}

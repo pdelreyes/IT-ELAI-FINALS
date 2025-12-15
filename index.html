@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IT-ELAI Finals</title>
+
+  <!-- CONNECT CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+
+  <!-- TOP BADGE -->
+  <div class="hero-badge">AI</div>
+
+  <!-- NAME + SUBTITLE -->
+  <h2 class="hero-name">Patrick L. de los Reyes</h2>
+  <p class="hero-subtitle">IT-ELAI FINALS</p>
+
+  <!-- MAIN TITLE -->
+  <h1>Innovative Solutions.<br>Reliable Results.</h1>
+
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Hello! I'm Patrick De los Reyes. With a passion for cutting-edge technology and a commitment to excellence, I specialize in crafting bespoke IT solutions that drive success and efficiency for my clients globally.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Services & Expertise</h2>
+  <div class="cards">
+    <div class="card">Web Development</div>
+    <div class="card">Technical Consulting</div>
+    <div class="card">Unity Development</div>
+    <div class="card">Cloud Computing</div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="cards">
+    <div class="card">AI Chatbot</div>
+    <div class="card">RAG System</div>
+    <div class="card">Static Website</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  © 2024 Patrick De los Reyes. All rights reserved.
+</footer>
+
+<!-- FLOWISE CHATBOT -->
+<script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
+<script>
+  window.flowiseChatbot.init({
+    chatflowid: "YOUR_CHATFLOW_ID",
+    apiHost: "https://ai.yourdomain.com"
+  });
+</script>
+
+<!-- CONNECT JS (VERY IMPORTANT: AT BOTTOM) -->
+<script src="script.js"></script>
+
+</body>
+</html>
